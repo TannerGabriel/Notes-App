@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".note.NoteDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/note_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/note_picture_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_detail_toolbar"
+        android:maxHeight="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        />
+
+    <EditText
+        android:id="@+id/note_title_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textStyle="bold"
+        android:maxLength="120"
+        android:maxLines="2"
+        android:layout_below="@id/note_picture_imageview"
+        style="@style/FullWidthEditText"/>
+
+    <EditText
+        android:id="@+id/note_detail_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Note"
+        android:layout_below="@id/note_title_edittext"
+        style="@style/FullWidthEditText"/>
+
+</RelativeLayout>
